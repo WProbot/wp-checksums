@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Downloads WP-CLI - http://wp-cli.org/
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar &>/dev/null
 
 # Checks to see if it is present and shows its version
 php wp-cli.phar --info
