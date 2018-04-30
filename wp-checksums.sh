@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Test to see if the user is root (we don't want them to be root)
-if [`whoami` == root ]
+if [ `whoami` == root ]
 then
 	echo && echo "DO NOT run this script as root. Please run this script as a normal user".
 	exit 1
