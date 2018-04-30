@@ -3,7 +3,7 @@
 # Test to see if the user is root (we don't want them to be root)
 if [ `whoami` == root ]
 then
-	echo && echo "DO NOT run this script as root. Please run this script as a normal user".
+	echo && echo "DO NOT run this script as root. Please run this script as a normal user." && echo
 	exit 1
 fi
 
