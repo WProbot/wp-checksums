@@ -19,4 +19,5 @@ php wp-cli.phar core verify-checksums
 # Removes WP-CLI from the system after work is done
 rm -f wp-cli.phar
 
-exit 0
+# Removes this script itself
+rm -f wp-checksums.sh
