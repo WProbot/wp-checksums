@@ -5,4 +5,4 @@ A simple tool which makes use of [WP-CLI](https://wp-cli.org) to verify the chec
 
 One single command can be used to download, run and remove this tool:
 
-### curl -s https://raw.githubusercontent.com/ashleycawley/wp-checksums/master/wp-checksums.sh | bash
+`curl -s https://raw.githubusercontent.com/ashleycawley/wp-checksums/master/wp-checksums.sh | bash`
