@@ -7,17 +7,20 @@ then
 	exit 1
 fi
 
+DLPATH=/tmp/
+
 # Downloads WP-CLI - http://wp-cli.org/
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar &>/dev/null
+#curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar &>/dev/null
+curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar --output ${DLPATH}wp-cli.phar
 
 # Checks to see if it is present and shows its version
-php wp-cli.phar --info
+php ${DLPATH}wp-cli.phar --info
 
 # Checks the checksums of your WordPress website against what they should be
-php wp-cli.phar core verify-checksums
+php ${DLPATH}wp-cli.phar core verify-checksums
 
 # Removes WP-CLI from the system after work is done
-rm -f wp-cli.phar
+rm -f ${DLPATH}wp-cli.phar
 
 # Removes this script itself
 rm -f wp-checksums.sh
